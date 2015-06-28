@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 //PUT ip.address.whatever:80/user~~somepayload json
 app.put('/ship', function (req, res) {
 	//Creates an SQL command/statement
-	var stmt = db.prepare("INSERT OR REPLACE INTO users (id,username) VALUES (?, ?, ?, ?, ?)");
+	var stmt = db.prepare("INSERT OR REPLACE INTO users (id,red,green,blue,alpha) VALUES (?, ?, ?, ?, ?)");
 	stmt.run(req.body.id, req.body.red, req.body.green, req.body.blue, red.body.alpha);
 	stmt.finalize();
 
