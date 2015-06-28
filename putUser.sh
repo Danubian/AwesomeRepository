@@ -1,1 +1,1 @@
-curl -d '{ "id" : "danubian", "red" : "1f", "green" : "0f", "blue" : "0f", "alpha" : "1f" }' -H "Content-Type: application/json" -X PUT http://54.173.208.168:80/user
+curl -d '{ "id" : "danubian", "red" : "1f", "green" : "0f", "blue" : "0f", "alpha" : "1f" }' -H "Content-Type: application/json" -X PUT http://54.173.208.168:80/ship
