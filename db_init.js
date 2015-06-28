@@ -25,11 +25,11 @@ db.serialize(function() {
 // 	});
 }
 
-function setupTable(table_name, table_columns_names) {
+function setupTable(table_name, columns) {
 	console.log("Setting up " + table_name + "...");
 
 	db.run("DROP TABLE IF EXISTS " + table_name);
-	db.run("CREATE TABLE " + table_name + " " + table_columns_names);
+	db.run("CREATE TABLE " + table_name + " " + columns);
 
 	console.log("Table " + table_name + " initialized!");
 }
