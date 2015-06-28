@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 //})
 
 //PUT ip.address.whatever:80/user~~somepayload json
-app.put('/ship', function (req, res) {
+app.get('/ship', function (req, res) {
 	var body = req.body;
 	console.log(req.body);
 	//Creates an SQL command/statement
