@@ -23,13 +23,13 @@ db.serialize(function() {
 // 	db.each("SELECT id, x, y FROM users", function(err, row) {
 // 	  console.log(row.id + ": " + row.x + ", " + row.y);
 // 	});
-}
+//}
 
-function setupTable(table_name, columns) {
+function setupTable(table_name, table_columns_name) {
 	console.log("Setting up " + table_name + "...");
 
 	db.run("DROP TABLE IF EXISTS " + table_name);
-	db.run("CREATE TABLE " + table_name + " " + columns);
+	db.run("CREATE TABLE " + table_name + " " + table_columns_name);
 
 	console.log("Table " + table_name + " initialized!");
 }
