@@ -1,5 +1,6 @@
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('./awesome.db');
+var dbName = './awesome.db';
+var db = new sqlite3.Database(dbName);
 
 db.serialize(function() {
   console.log("Database Serialization Initializing...");
