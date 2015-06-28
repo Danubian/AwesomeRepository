@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sudo node server.js",
-    "dbInit": "node db_init.js"
+    "db": "node db_init.js"
   },
   "keywords": [
     "Awesome"
