@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 
 //PUT ip.address.whatever:80/user~~somepayload json
 app.put('/user', function (req, res) {
-	res.send(req);
+	res.send(req.body);
 })
 
 
