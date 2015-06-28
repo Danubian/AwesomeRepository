@@ -29,20 +29,21 @@ app.get('/', function (req, res) {
 
 //PUT ip.address.whatever:80/user~~somepayload json
 app.put('/ship', function (req, res) {
+	var body = req.body;
 	console.log(req.body);
 	//Creates an SQL command/statement
 	var stmt = db.prepare("INSERT OR REPLACE INTO " + shipTable + " (id,red,green,blue,alpha) VALUES (?, ?, ?, ?, ?)");
-	stmt.run(req.body.id, req.body.red, req.body.green, req.body.blue, red.body.alpha);
+	stmt.run(body.id, body.red, body.green, body.blue, body.alpha);
 	stmt.finalize();
 
 	console.log("Added Ship");
 	
 	//Test code, displays all users in the console
 	db.each("SELECT id, red, green, blue, alpha FROM " + shipTable, function(err, row) {
-	  console.log(row.id + ": " + row.red + ", " + row.green + ", " + row.blue + ", " + row.alpha);
+		console.log(row.id + ": " + row.red + ", " + row.green + ", " + row.blue + ", " + row.alpha);
 	});
 
-	res.send(req.body);
+	res.send(body);
 })
 
 
