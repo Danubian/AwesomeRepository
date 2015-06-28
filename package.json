@@ -1,0 +1,15 @@
+{
+  "name": "awesomeFolder",
+  "version": "0.0.0",
+  "description": "It's awesome",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo node server.js"
+  },
+  "keywords": [
+    "Awesome"
+  ],
+  "author": "",
+  "license": "BSD-2-Clause"
+}
